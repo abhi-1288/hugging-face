@@ -1,0 +1,24 @@
+# ===== huggingface local setup =====
+
+# Python virtualenv (packages, torch, transformers...)
+.venv/
+
+# pip / uv / temp caches
+temp/
+
+# llama.cpp portable binaries + runtimes
+tools/
+
+# ---- models: keep the engine folders in git, hide their contents ----
+models/*
+!models/huggingface/
+!models/ollama/
+
+models/huggingface/*
+!models/huggingface/.gitkeep
+models/ollama/*
+!models/ollama/.gitkeep
+
+# Generated files
+out.png
+*.log
